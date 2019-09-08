@@ -1,0 +1,8 @@
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\bin\Debug\DataAccessLayer2.dll.config
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\bin\Debug\DataAccessLayer2.dll
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\bin\Debug\DataAccessLayer2.pdb
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\bin\Debug\EntityFramework.dll
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\bin\Debug\EntityFramework.xml
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\obj\Debug\DataAccessLayer2.csprojResolveAssemblyReference.cache
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\obj\Debug\DataAccessLayer2.dll
+C:\Users\ds\Desktop\KitchenProject\DataAccessLayer2\obj\Debug\DataAccessLayer2.pdb

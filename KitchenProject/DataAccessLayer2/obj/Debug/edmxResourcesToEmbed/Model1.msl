@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KitchenProjectModelStoreContainer" CdmEntityContainer="KitchenProjectEntities">
+    <EntitySetMapping Name="User_Credentials">
+      <EntityTypeMapping TypeName="KitchenProjectModel.User_Credentials">
+        <MappingFragment StoreEntitySet="User_Credentials">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="User_password" ColumnName="User_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin_Credentials">
+      <EntityTypeMapping TypeName="KitchenProjectModel.Admin_Credentials">
+        <MappingFragment StoreEntitySet="Admin_Credentials">
+          <ScalarProperty Name="Admin_password" ColumnName="Admin_password" />
+          <ScalarProperty Name="AdminUsername" ColumnName="AdminUsername" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Food_Items">
+      <EntityTypeMapping TypeName="KitchenProjectModel.Food_Items">
+        <MappingFragment StoreEntitySet="Food_Items">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Catageory" ColumnName="Catageory" />
+          <ScalarProperty Name="Special_Notes" ColumnName="Special_Notes" />
+          <ScalarProperty Name="Ingrediants" ColumnName="Ingrediants" />
+          <ScalarProperty Name="Food_Name" ColumnName="Food_Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carts">
+      <EntityTypeMapping TypeName="KitchenProjectModel.cart">
+        <MappingFragment StoreEntitySet="cart">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="Food_name" ColumnName="Food_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

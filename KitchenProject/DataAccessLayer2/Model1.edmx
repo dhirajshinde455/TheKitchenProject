@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KitchenProjectModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="KitchenProjectModelStoreContainer">
+          <EntitySet Name="Admin_Credentials" EntityType="KitchenProjectModel.Store.Admin_Credentials" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="cart" EntityType="KitchenProjectModel.Store.cart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Food_Items" EntityType="KitchenProjectModel.Store.Food_Items" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User_Credentials" EntityType="KitchenProjectModel.Store.User_Credentials" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Admin_Credentials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="AdminUsername" Type="varchar" MaxLength="50" />
+          <Property Name="Admin_password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Food_name" Type="varchar" MaxLength="50" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="Food_Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Food_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Ingrediants" Type="varchar" MaxLength="50" />
+          <Property Name="Special_Notes" Type="varchar" MaxLength="50" />
+          <Property Name="Catageory" Type="varchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+        </EntityType>
+        <EntityType Name="User_Credentials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="User_password" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KitchenProjectModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KitchenProjectEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="User_Credentials" EntityType="KitchenProjectModel.User_Credentials" />
+          <EntitySet Name="Admin_Credentials" EntityType="KitchenProjectModel.Admin_Credentials" />
+          <EntitySet Name="Food_Items" EntityType="KitchenProjectModel.Food_Items" />
+          <EntitySet Name="carts" EntityType="KitchenProjectModel.cart" />
+        </EntityContainer>
+        <EntityType Name="User_Credentials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="User_password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Admin_Credentials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="AdminUsername" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Admin_password" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Food_Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Food_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ingrediants" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Special_Notes" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Catageory" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Price" />
+        </EntityType>
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Food_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="quantity" />
+          <Property Type="Int32" Name="price" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KitchenProjectModelStoreContainer" CdmEntityContainer="KitchenProjectEntities">
+          <EntitySetMapping Name="User_Credentials">
+            <EntityTypeMapping TypeName="KitchenProjectModel.User_Credentials">
+              <MappingFragment StoreEntitySet="User_Credentials">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="User_password" ColumnName="User_password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin_Credentials">
+            <EntityTypeMapping TypeName="KitchenProjectModel.Admin_Credentials">
+              <MappingFragment StoreEntitySet="Admin_Credentials">
+                <ScalarProperty Name="Admin_password" ColumnName="Admin_password" />
+                <ScalarProperty Name="AdminUsername" ColumnName="AdminUsername" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Food_Items">
+            <EntityTypeMapping TypeName="KitchenProjectModel.Food_Items">
+              <MappingFragment StoreEntitySet="Food_Items">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Catageory" ColumnName="Catageory" />
+                <ScalarProperty Name="Special_Notes" ColumnName="Special_Notes" />
+                <ScalarProperty Name="Ingrediants" ColumnName="Ingrediants" />
+                <ScalarProperty Name="Food_Name" ColumnName="Food_Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="carts">
+            <EntityTypeMapping TypeName="KitchenProjectModel.cart">
+              <MappingFragment StoreEntitySet="cart">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="Food_name" ColumnName="Food_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

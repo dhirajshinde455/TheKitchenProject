@@ -1,0 +1,9 @@
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\Kitchen.dll
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\Kitchen.pdb
+C:\Users\ds\Desktop\KitchenProject\Kitchen\obj\Debug\Kitchen.csprojResolveAssemblyReference.cache
+C:\Users\ds\Desktop\KitchenProject\Kitchen\obj\Debug\Kitchen.dll
+C:\Users\ds\Desktop\KitchenProject\Kitchen\obj\Debug\Kitchen.pdb
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\EntityFramework.dll
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\EntityFramework.xml
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\DataAccessLayer2.dll
+C:\Users\ds\Desktop\KitchenProject\Kitchen\bin\DataAccessLayer2.pdb

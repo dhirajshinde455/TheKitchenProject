@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KitchenProjectModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="KitchenProjectEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="User_Credentials" EntityType="KitchenProjectModel.User_Credentials" />
+    <EntitySet Name="Admin_Credentials" EntityType="KitchenProjectModel.Admin_Credentials" />
+    <EntitySet Name="Food_Items" EntityType="KitchenProjectModel.Food_Items" />
+    <EntitySet Name="carts" EntityType="KitchenProjectModel.cart" />
+  </EntityContainer>
+  <EntityType Name="User_Credentials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="User_password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Admin_Credentials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="AdminUsername" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Admin_password" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Food_Items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Food_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Ingrediants" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Special_Notes" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Catageory" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Price" />
+  </EntityType>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Food_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" />
+    <Property Type="Int32" Name="price" />
+  </EntityType>
+</Schema>

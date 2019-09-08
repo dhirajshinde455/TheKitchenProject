@@ -1,0 +1,44 @@
+
+
+create database KitchenProject
+
+create table User_Credentials
+(
+id int primary key,
+Username varchar(50),
+User_password varchar(50)
+)
+
+create table Admin_Credentials
+(
+id int primary key,
+AdminUsername varchar(50),
+Admin_password varchar(50)
+)
+
+insert into User_Credentials values (1,'user','users')
+insert into Admin_Credentials values(1,'admin','admins')
+
+
+create table Food_Items
+(
+id int primary key ,
+Food_Name varchar(50),
+Ingrediants varchar(50),
+Special_Notes varchar(50),
+Catageory varchar(50),
+Price int
+)
+
+create table cart
+(
+id int primary key identity, 
+Food_name varchar(50),
+quantity int,
+price int 
+)
+insert into Food_Items values (1,'Food_A','Ingrediants_A','Special_Notes_A','Catageory_A',10)
+insert into Food_Items values (2,'Food_B','Ingrediants_B','Special_Notes_B','Catageory_B',20)
+insert into Food_Items values (3,'Food_C','Ingrediants_C','Special_Notes_C','Catageory_C',30)
+insert into Food_Items values (4,'Food_D','Ingrediants_D','Special_Notes_D','Catageory_D',40)
+insert into Food_Items values (5,'Food_E','Ingrediants_E','Special_Notes_E','Catageory_E',50)

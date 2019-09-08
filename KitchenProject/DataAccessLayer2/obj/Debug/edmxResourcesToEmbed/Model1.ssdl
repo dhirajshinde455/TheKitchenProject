@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KitchenProjectModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KitchenProjectModelStoreContainer">
+    <EntitySet Name="Admin_Credentials" EntityType="KitchenProjectModel.Store.Admin_Credentials" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cart" EntityType="KitchenProjectModel.Store.cart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Food_Items" EntityType="KitchenProjectModel.Store.Food_Items" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User_Credentials" EntityType="KitchenProjectModel.Store.User_Credentials" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Admin_Credentials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="AdminUsername" Type="varchar" MaxLength="50" />
+    <Property Name="Admin_password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Food_name" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="Food_Items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Food_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Ingrediants" Type="varchar" MaxLength="50" />
+    <Property Name="Special_Notes" Type="varchar" MaxLength="50" />
+    <Property Name="Catageory" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="User_Credentials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="User_password" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

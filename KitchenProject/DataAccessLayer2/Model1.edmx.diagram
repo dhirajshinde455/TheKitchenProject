@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fe7f74184a5c46ba8b8f84afa958d150" Name="Diagram1">
+        <EntityTypeShape EntityType="KitchenProjectModel.User_Credentials" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KitchenProjectModel.Admin_Credentials" Width="1.5" PointX="7.0933653037498541" PointY="6.9436235162166984" />
+        <EntityTypeShape EntityType="KitchenProjectModel.Food_Items" Width="1.5" PointX="11.556478483395875" PointY="12.388789093302931" />
+        <EntityTypeShape EntityType="KitchenProjectModel.cart" Width="1.5" PointX="1.6305739533298529" PointY="12.332161462089122" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
